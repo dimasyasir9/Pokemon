@@ -1,0 +1,110 @@
+:root {
+    --bg: #B2A4FF;
+    --primary: #FFB4B4;
+    --secondary: #FFDEB4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+/* Navigasi */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--primary);
+    padding: 1rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+nav .navbar {
+    font-size: 1.2rem;
+    position: absolute;
+    right: -100%;
+    top: 100%;
+    height: 100vh;
+    width: 15rem;
+    text-align: center;
+    background-color: rgba(255, 0, 0, .7);
+}
+
+nav .navbar a {
+    /* line-height: 23vh; */
+    display: block;
+    margin: 7rem 0;
+    color: var(--bg);
+}
+
+nav .navbar a:hover {
+    color: var(--primary);
+}
+
+nav .navbar a::after {
+    content: '';
+    display: block;
+    width: 50%;
+    background-color: #B2A4FF;
+    margin: auto;
+}
+
+nav .navbar.slide {
+    right: 0;
+}
+
+
+nav .navbar a:hover {
+    color: var(--secondary);
+}
+
+nav .navbar a::after {
+    content: '';
+    display: block;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid red;
+    transform: scaleX(0);
+    transition: .9s;
+}
+
+nav .navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+/* section */
+.bungkus {
+    background-color: rgb(203, 165, 165);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    align-items: center;
+    gap: 1rem;
+}
+
+.pokemon {
+    width: 100px;
+    height: 100px;
+}
+
+section:nth-child(1n) {
+    margin-top: 5rem;
+}
+
+h2 {
+    margin-top: 1rem;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+}
